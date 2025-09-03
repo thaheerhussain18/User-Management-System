@@ -36,12 +36,12 @@ password gets hashed with bcryptjs with saltrounds of 12 , then get stored in da
 
 example body should be
 
-```{
+{
     "lastName":"Joy",
     "firstName":"Boy",
     "email":"thaheer@any.com",
     "password":"any"
-}```
+}
 
 
 **2.Login user**
