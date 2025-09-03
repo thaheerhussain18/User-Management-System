@@ -37,10 +37,15 @@ password gets hashed with bcryptjs with saltrounds of 12 , then get stored in da
 example body should be
 
 {
+
     "lastName":"Joy",
+
     "firstName":"Boy",
+
     "email":"thaheer@any.com",
+
     "password":"any"
+
 }
 
 
@@ -51,10 +56,11 @@ if user  Logged in successfully it returns JWT token singed with secretKey , aft
 
 example body should be 
 
-```{
+{
     "email":"thaheer@any.com",
+
     "password":"any"
-}```
+}
 
 **3.Get all Users**
 
@@ -71,10 +77,11 @@ takes jwt token and user can update firstName ,lastName with id params
 
 example body should be 
 
-```{
+{
      "lastName":"Joy",
+
     "firstName:"Boy"
-}```
+}
 
 **5.Delete User by id**
 
@@ -84,13 +91,18 @@ only logged in user can delete their account using jwt token
 
 **Configure MYSQL**
 
-```CREATE TABLE users (
+CREATE TABLE users (
+
   id INT AUTO_INCREMENT PRIMARY KEY,
+
   email VARCHAR(255) UNIQUE NOT NULL,
+
   firstName VARCHAR(100) NOT NULL,
+
   lastName VARCHAR(100) NOT NULL,
+  
   password VARCHAR(255) NOT NULL
-);```
+);
 
 **update the required details like host,databasename,username,password in db.js module**
 **secret key can be changed in jwt module**
