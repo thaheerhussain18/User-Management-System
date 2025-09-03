@@ -9,6 +9,7 @@
 ### 1. Clone the repository
 
 ```git clone https://github.com/thaheerhussain18/User-Management-System.git```
+
 ```cd User-Management-System```
 
 ## Install dependencies
@@ -34,6 +35,7 @@ registers a new user
 password gets hashed with bcryptjs with saltrounds of 12 , then get stored in database i.e i used MYSQL here 
 
 example body should be
+
 ```{
     "lastName":"Joy",
     "firstName":"Boy",
@@ -48,6 +50,7 @@ POST /login
 if user  Logged in successfully it returns JWT token singed with secretKey , after comparing the hashed password from database and req.body using bcryptjs 
 
 example body should be 
+
 ```{
     "email":"thaheer@any.com",
     "password":"any"
