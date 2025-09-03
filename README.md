@@ -84,7 +84,7 @@ example body should be
      "lastName":"Joy",
 
     "firstName:"Boy"
-    
+
 }
 
 **5.Delete User by id**
@@ -109,7 +109,9 @@ CREATE TABLE users (
 );
 
 **update the required details like host,databasename,username,password in db.js module**
+
 **secret key can be changed in jwt module**
+
 **Tested all endpoints in POSTMAN**
 
 
