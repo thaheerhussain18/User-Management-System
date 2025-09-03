@@ -21,7 +21,7 @@ app.post('/register',async (req,res)=>{
 
     try{
     const [row]=await db.execute("select * from users where email=?",[email])
-        console.log( row)
+        // console.log( row)
         if(row.length>0){
             return res.json({message:"duplicate record fund"})
         }
