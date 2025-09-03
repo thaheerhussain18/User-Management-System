@@ -1,6 +1,7 @@
 const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const validator=require('validator')
 const {authToken,secret}=require("./jwt")
 const db = require("./db");   
 const app = express();
@@ -13,6 +14,9 @@ app.post('/register',async (req,res)=>{
     const {firstName,lastName,email,password}=req.body
     if(!firstName || !lastName || !email || !password){
         return res.status(400).json({'message':"all fields is needed"})
+    }
+    if(!validator.isEmail(email)){
+        return res.status(400).json({'message':"email is invalid"})
     }
 
     try{
